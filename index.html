@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Em manutenção</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      padding: 0;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    
+    /* Header Styles */
+    .header {
+      width: 100%;
+      top: 0;
+      background-color: #2C204E;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: fixed;
+      z-index: 50;
+      height: 75px;
+    }
+    
+    .header-container {
+      width: 100%;
+      max-width: 1344px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    
+    .logo-icon {
+      color: white;
+      font-size: 60px;
+    }
+    
+    .logo-text {
+      text-align: left;
+      line-height: 1.2;
+    }
+    
+    .logo-text-main {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: white;
+      margin: 0;
+    }
+    
+    .logo-text-sub {
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      color: white;
+      margin: 0;
+    }
+    
+    /* Main Content */
+    .main-content {
+      flex-grow: 1;
+      margin-top: 75px;
+      padding-bottom: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    
+    .maintenance-container {
+      background-color: white;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      max-width: 1344px;
+      margin: 2rem auto 0;
+      text-align: center;
+    }
+    
+    .maintenance-icon {
+      width: 64px;
+      height: 64px;
+      color: #eab308;
+      margin: 0 auto 16px;
+    }
+    
+    .maintenance-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 8px;
+    }
+    
+    .maintenance-message {
+      color: #4b5563;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    
+    .maintenance-support {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    
+    /* Footer Styles */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #2C204E;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+      z-index: 0;
+      color: white;
+      text-align: center;
+      padding: 16px 0;
+      font-size: 14px;
+    }
+    
+    .footer-container {
+      width: 100%;
+      max-width: 1344px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+    
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .maintenance-title {
+        font-size: 2rem;
+      }
+      
+      .maintenance-message {
+        font-size: 1rem;
+      }
+      
+      .main-content {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo" onclick="window.location.href='/dashboard'">
+        <img src="logo.png" alt="Logo" class="logo-icon" style="width: 60px; height: 60px;">
+        <div class="logo-text">
+          <p class="logo-text-main">Edícula</p>
+          <p class="logo-text-sub">express</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="maintenance-container">
+      <svg class="maintenance-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+      </svg>
+      <h2 class="maintenance-title">
+        Estamos em manutenção
+      </h2>
+      <p class="maintenance-message">
+        Nosso sistema está temporariamente fora do ar para melhorias. <br /> Voltaremos em breve. Agradecemos sua paciência!
+      </p>
+      <p class="maintenance-support">Se o problema persistir, entre em contato com o suporte.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      © 2025
+      <a href="https://www.ediculaexpress.com.br/" class="footer-link">
+        Edícula Express
+      </a>. Todos os direitos reservados.
+    </div>
+  </footer>
+</body>
+</html>
